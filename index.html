@@ -5,52 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maze</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.14.2/matter.min.js" integrity="sha512-pi0tSRZdlNRZeANPwdAIHRAYg6gZZV6QlAiyHXn5TYqLzBKE9jlttO/QgYLMhISD6oNv2kPsVelx+n5nw0FqKA==" crossorigin="anonymous"></script>
-  <script>
-    function refreshPage(){
-      window.location.reload();
-    }
-  </script>
-  <style>
-    body{
-      margin: 0;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    .hidden {
-      display: none !important;
-    }
-
-    h1 {
-      color: white;
-      font-size: 72px;
-      font-family: Arial, Helvetica, sans-serif;
-
-    }
-    
-    .winner {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      z-index: 1;
-      height: 100vh;
-      width: 100vw;
-    }
-
-    #block button {
-      display: block;
-    }
-  </style>
+  <link rel="icon" type="image/png" href="/favicon.png"/>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <div class="winner hidden">
     <h1>You Win!</h1>
     <div id ="block">
-      <button onClick="refreshPage()">Restart</button>
+      <button onClick="window.location.reload()">Restart</button>
     </div>   
   </div>
-
-    <script src="index.js"></script>
+  <script>window.onresize = function(){ location.reload(); } </script>
+  <script src="index.js"></script>
 </body>
 </html>
